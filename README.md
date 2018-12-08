@@ -1,5 +1,5 @@
 # Odoo Custom Addons
-This repository contains modules that extend / modify parts of **[Odoo](https://www.odoo.com/)** ERP.
+This repository contains addons that extend / modify parts of **[Odoo](https://www.odoo.com/)** ERP.
 
 # Addons list
 Addon | Version | Description |
