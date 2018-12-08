@@ -1,0 +1,27 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* vat_checker
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0-20170911\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-11-28 10:14+0000\n"
+"PO-Revision-Date: 2018-11-28 10:14+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: vat_checker
+#: model:ir.model,name:vat_checker.model_sale_order
+msgid "Sales Order"
+msgstr "Pedido de venta"
+
+#. module: vat_checker
+#: code:addons/vat_checker/models/sale_order.py:6
+#, python-format
+msgid "The VAT for this customer is not defined. The customer should have a VAT."
+msgstr "Este cliente no tiene un NIF establecido. Es necesario establecer el NIF para poder facturar."
