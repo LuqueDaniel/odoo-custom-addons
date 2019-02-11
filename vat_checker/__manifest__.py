@@ -7,10 +7,6 @@
     'version': '10.0.1.0.0',
     'license': 'AGPL-3',
     'summary': 'Check if the customer has a VAT before creating an invoice',
-    'description': """
-        Check if the customer has a VAT before creating an invoice from a
-        sale order.
-        """,
     'author': 'Daniel Luque',
     'website': 'https://github.com/LuqueDaniel/odoo_custom_addons',
     'category': 'Invoicing & Payments',
