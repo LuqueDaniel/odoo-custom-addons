@@ -8,7 +8,7 @@
     'license': 'AGPL-3',
     'summary': 'Check if the customer has a VAT before creating an invoice',
     'author': 'Daniel Luque',
-    'website': 'https://github.com/LuqueDaniel/odoo_custom_addons',
+    'website': 'https://github.com/LuqueDaniel/odoo-custom-addons',
     'category': 'Invoicing & Payments',
     'depends': ['sale', 'base_vat'],
     'installable': True

@@ -8,7 +8,7 @@
     'summary': """This addon replaces the `int` fields of the
                `stock.location` model with new ones of type `char`""",
     'author': 'Daniel Luque',
-    'website': "https://github.com/LuqueDaniel/odoo_custom_addons",
+    'website': "https://github.com/LuqueDaniel/odoo-custom-addons",
     'license': 'AGPL-3',
     'category': 'Warehouse Management',
     'depends': ['stock'],
