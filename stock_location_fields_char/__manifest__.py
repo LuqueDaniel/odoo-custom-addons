@@ -4,7 +4,7 @@
 
 {
     'name': 'Stock Location Fields Char',
-    'version': '0.1',
+    'version': '10.0.1.0.0',
     'summary': """This addon replaces the `int` fields of the `stock.location` model with new ones of type `char`""",
     'description': """
     This addon replaces the `int` fields of the `stock.location` model with new ones of type `char

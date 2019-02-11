@@ -1,7 +1,7 @@
+# -*- coding: utf-8 -*-
 # Copyright 2017-2018 Daniel Luque
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl)
-# -*- coding: utf-8 -*-
-from odoo import models, api, _
+from odoo import _, api, models
 from odoo.exceptions import UserError
 
 
