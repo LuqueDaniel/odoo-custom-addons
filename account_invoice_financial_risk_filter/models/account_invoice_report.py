@@ -8,4 +8,5 @@ class AccountInvoiceReport(models.Model):
     """Adds credit_policy field to invoice model."""
     _inherit = 'account.invoice.report'
 
-    credit_policy = fields.Char(related='partner_id.credit_policy')
+    credit_policy = fields.Char(related='partner_id.credit_policy',
+                                readonly=True)

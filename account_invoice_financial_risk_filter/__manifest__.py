@@ -4,7 +4,7 @@
 
 {
     'name': 'Partner financial risk invoice filter',
-    'version': '10.0.1.0.0',
+    'version': '10.0.1.0.1',
     'license': 'AGPL-3',
     'summary': """Adds the ability to filter invoices through the customer's
                policy field""",

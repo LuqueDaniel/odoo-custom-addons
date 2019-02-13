@@ -6,7 +6,7 @@ This repository contains addons that extend / modify parts of **[Odoo](https://w
 # Addons list
 Addon | Version | Description |
 ------|---------|-------------|
-[account_invoice_financial_risk_filter](https://github.com/LuqueDaniel/odoo-custom-addons/tree/10.0/account_invoice_financial_risk_filter) | 10.0.1.0.0 | dds the ability to filter invoices through the customer's policy field |
+[account_invoice_financial_risk_filter](https://github.com/LuqueDaniel/odoo-custom-addons/tree/10.0/account_invoice_financial_risk_filter) | 10.0.1.0.1 | dds the ability to filter invoices through the customer's policy field |
 [stock_location_fields_char](https://github.com/LuqueDaniel/odoo-custom-addons/tree/10.0/stock_location_fields_char) | 10.0.1.0.0 | This addon replaces the `int` fields of the `stock.location` model with new ones of type `char` |
 [vat_checker](https://github.com/LuqueDaniel/odoo-custom-addons/tree/10.0/vat_checker) | 10.0.1.0.0 | Check if the customer has a VAT before creating an invoice from a sale order. |
 
