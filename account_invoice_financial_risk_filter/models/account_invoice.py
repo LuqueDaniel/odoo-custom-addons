@@ -5,7 +5,7 @@ from odoo import fields, models
 
 
 class AccountInvoice(models.Model):
-    """Adds credit_policy field to Account Invoice Report model."""
+    """Adds credit_policy field to Account Invoice model."""
     _inherit = 'account.invoice'
 
     credit_policy = fields.Char(related='partner_id.credit_policy',
