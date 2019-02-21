@@ -1,4 +1,4 @@
-# Partner financial risk invoice Filter
+# Pos Margin Report
 Add sales margins to PoS orders analysis report.
 
 - Margin Total
