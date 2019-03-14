@@ -7,6 +7,7 @@ This repository contains addons that extend / modify parts of **[Odoo](https://w
 Addon | Version | Description |
 ------|---------|-------------|
 | [account_invoice_financial_risk_filter](https://github.com/LuqueDaniel/odoo-custom-addons/tree/10.0/account_invoice_financial_risk_filter) | 10.0.1.0.1 | Adds the ability to filter invoices through the customer's policy field |
+| [hide_cost_margin](https://github.com/LuqueDaniel/odoo-custom-addons/tree/10.0/hide_cost_margin) | 10.0.1.0.0 | hides the cost and margin prices for all users who don't have the `Show costs and margins` permission |
 | [partner_tag_append_model](https://github.com/LuqueDaniel/odoo-custom-addons/tree/10.0/partner_tag_append_model) | 10.0.1.0.0 | Adds partner tag field to invoices and sale orders |
 | [pos_margin_report](https://github.com/LuqueDaniel/odoo-custom-addons/tree/10.0/pos_margin_report) | 10.0.1.0.0 | Sales margins in PoS orders analysis report |
 | [stock_location_fields_char](https://github.com/LuqueDaniel/odoo-custom-addons/tree/10.0/stock_location_fields_char) | 10.0.1.0.0 | This addon replaces the `int` fields of the `stock.location` model with new ones of type `char` |

@@ -1,0 +1,22 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* hide_cost_margin
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0-20180725\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-03-14 16:48+0000\n"
+"PO-Revision-Date: 2019-03-14 16:48+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hide_cost_margin
+#: model:res.groups,name:hide_cost_margin.group_show_cost_and_margin
+msgid "Show costs and margins"
+msgstr "Mostrar márgenes y costes"
+
