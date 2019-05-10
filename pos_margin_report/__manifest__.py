@@ -10,5 +10,5 @@
     'license': 'AGPL-3',
     'depends': ['pos_margin'],
     'category': 'Point Of Sale',
-    'installable': True,
+    'installable': False,
 }

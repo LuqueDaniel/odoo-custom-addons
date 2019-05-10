@@ -11,5 +11,5 @@
     'website': 'https://github.com/LuqueDaniel/odoo-custom-addons',
     'category': 'Invoicing & Payments',
     'depends': ['sale', 'base_vat'],
-    'installable': True
+    'installable': False
 }

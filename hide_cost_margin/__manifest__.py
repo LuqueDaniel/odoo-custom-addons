@@ -15,5 +15,5 @@
         'security/groups.xml',
         'views/sale.xml'
     ],
-    'installable': True
+    'installable': False
 }

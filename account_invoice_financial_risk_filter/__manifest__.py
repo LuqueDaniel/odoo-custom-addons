@@ -12,5 +12,5 @@
     'website': 'https://github.com/LuqueDaniel/odoo-custom-addons',
     'category': 'Invoicing & Payments',
     'depends': ['partner_financial_risk'],
-    'installable': True
+    'installable': False
 }

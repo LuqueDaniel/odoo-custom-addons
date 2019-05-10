@@ -11,5 +11,5 @@
     'website': 'https://github.com/LuqueDaniel/odoo-custom-addons',
     'category': 'Uncategorized',
     'depends': ['account', 'sale'],
-    'installable': True
+    'installable': False
 }

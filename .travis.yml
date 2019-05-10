@@ -3,7 +3,7 @@ sudo: false
 cache: pip
 
 python:
-  - "2.7"
+  - "3.5"
 
 addons:
   postgresql: "9.6"
@@ -14,7 +14,7 @@ addons:
 
 env:
   global:
-    - VERSION="10.0" TESTS="0" LINT_CHECK="0"
+    - VERSION="11.0" TESTS="0" LINT_CHECK="0"
 
   matrix:
     - LINT_CHECK="1"
@@ -30,7 +30,7 @@ install:
   - travis_install_nightly
 
 script:
-  - travis_run_tests
+  - travis_wait  travis_run_tests
 
 after_success:
   - travis_after_tests_success

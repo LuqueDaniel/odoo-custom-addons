@@ -16,5 +16,5 @@
         # Stock views
         'views/stock_location_views.xml',
     ],
-    'installable': True
+    'installable': False
 }
