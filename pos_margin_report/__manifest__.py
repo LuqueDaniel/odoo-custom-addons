@@ -4,7 +4,7 @@
 
 {
     'name': 'POS Margin Report',
-    'version': '10.0.1.0.0',
+    'version': '10.0.1.0.1',
     'summary': 'PoS Margin Reports',
     'author': 'Daniel Luque',
     'license': 'AGPL-3',
