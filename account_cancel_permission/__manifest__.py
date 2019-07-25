@@ -5,7 +5,7 @@
 {
     'name': 'Permission to Cancel Journal Entries',
     'version': '10.0.1.0.0',
-    'summary': """Only shows the button to cancel invoices, payments and 
+    'summary': """Only shows the button to cancel invoices, payments and
     bank statements to users with 'Cancel Journal Entries' permission""",
     'author': 'Daniel Luque',
     'website': "https://github.com/LuqueDaniel/odoo-custom-addons",

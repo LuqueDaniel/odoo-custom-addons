@@ -12,8 +12,10 @@ class PosOrderReport(models.Model):
     margin_total = fields.Float(string='Margin Total')
     margin_rate = fields.Float(string='Margin Rate', group_operator='avg')
 
-    def _select(self):
-        return """
+    def init(self):
+        tools.drop_view_if_exists(self._cr, self._table)
+        self._cr.execute("""
+        CREATE OR REPLACE VIEW report_pos_order AS (
             SELECT
                 MIN(l.id) AS id,
                 COUNT(*) AS nbr_lines,
@@ -48,10 +50,6 @@ class PosOrderReport(models.Model):
                 SUM(l.margin) as margin_total,
                 (SUM(l.margin / nullif(l.qty,0)) * 100 /
                 SUM(nullif(l.purchase_price,0)))::decimal as margin_rate
-        """
-
-    def _from(self):
-        return """
             FROM pos_order_line AS l
                 LEFT JOIN pos_order s ON (s.id=l.order_id)
                 LEFT JOIN product_product p ON (l.product_id=p.id)
@@ -59,10 +57,6 @@ class PosOrderReport(models.Model):
                 LEFT JOIN product_uom u ON (u.id=pt.uom_id)
                 LEFT JOIN pos_session ps ON (s.session_id=ps.id)
                 LEFT JOIN pos_config pc ON (ps.config_id=pc.id)
-        """
-
-    def _group_by(self):
-        return """
             GROUP BY
                 s.id, s.date_order, s.partner_id,s.state, pt.categ_id,
                 s.user_id, s.location_id, s.company_id, s.sale_journal,
@@ -72,23 +66,7 @@ class PosOrderReport(models.Model):
                 p.product_tmpl_id,
                 ps.config_id,
                 pc.stock_location_id
-        """
-
-    def _having(self):
-        return """
             HAVING
                 SUM(l.qty * u.factor) != 0
-        """
-
-    def init(self):
-        tools.drop_view_if_exists(self._cr, self._table)
-        self._cr.execute("""
-        CREATE OR REPLACE VIEW %s AS (
-            %s
-            %s
-            %s
-            %s
         )
-        """ % (self._table, self._select(), self._from(), self._group_by(),
-               self._having())
-        )
+        """)
