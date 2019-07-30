@@ -8,6 +8,7 @@ Addon | Version | Description |
 ------|---------|-------------|
 | [account_cancel_permission](https://github.com/LuqueDaniel/odoo-custom-addons/tree/10.0/account_cancel_permission) | 10.0.1.0.0 | Only shows the button to cancel invoices, payments and bank statements to users with **Cancel Journal Entries** permission |
 | [account_invoice_financial_risk_filter](https://github.com/LuqueDaniel/odoo-custom-addons/tree/10.0/account_invoice_financial_risk_filter) | 10.0.1.0.1 | Adds the ability to filter invoices through the customer's policy field |
+| [account_vendor_reference_required](https://github.com/LuqueDaniel/odoo-custom-addons/tree/10.0/account_vendor_reference_required) |10.0.1.0.0 | Makes the Vendor Reference field mandatory |
 | [hide_cost_margin](https://github.com/LuqueDaniel/odoo-custom-addons/tree/10.0/hide_cost_margin) | 10.0.1.0.1 | hides the cost and margin prices for all users who don't have the `Show costs and margins` permission |
 | [partner_tag_append_model](https://github.com/LuqueDaniel/odoo-custom-addons/tree/10.0/partner_tag_append_model) | 10.0.1.0.0 | Adds partner tag field to invoices and sale orders |
 | [pos_margin_report](https://github.com/LuqueDaniel/odoo-custom-addons/tree/10.0/pos_margin_report) | 10.0.1.0.1 | Sales margins in PoS orders analysis report |
