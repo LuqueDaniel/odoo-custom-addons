@@ -13,7 +13,6 @@
     'category': 'Warehouse Management',
     'depends': ['stock'],
     'data': [
-        # Stock views
         'views/stock_location_views.xml',
     ],
     'installable': True
