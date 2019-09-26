@@ -1,3 +1,4 @@
+![Odoo Logo](/setup/odoo_logo.png)
 # Odoo Custom Addons
 
 [![Build Status](https://travis-ci.org/LuqueDaniel/odoo-custom-addons.svg?branch=10.0)](https://travis-ci.org/LuqueDaniel/odoo-custom-addons)
@@ -14,7 +15,7 @@ This repository contains addons that extend / modify parts of
 * [account_invoice_financial_risk_filter](https://github.com/LuqueDaniel/odoo-custom-addons/tree/10.0/account_invoice_financial_risk_filter)
   (10.0.1.0.1)
     * Adds the ability to filter invoices through the customer's policy field.
-* [account_invoice_payment_partner_required](https://github.com/LuqueDaniel/odoo-custom-addons/tree/10.0/account_invoice_financial_risk_filter)
+* [account_invoice_payment_partner_required](https://github.com/LuqueDaniel/odoo-custom-addons/tree/10.0/account_invoice_payment_partner_required)
   (10.0.1.0.0)
     * Makes the Payment Mode and Payment Terms fields of the invoice mandatory.
 * [account_payment_partner_required](https://github.com/LuqueDaniel/odoo-custom-addons/tree/10.0/account_payment_partner_required)
