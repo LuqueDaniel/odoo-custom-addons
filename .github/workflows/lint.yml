@@ -1,5 +1,10 @@
 name: Lint
-on: [pull_request, push]
+  push:
+    paths:
+      - '*.py'
+  pull_request:
+    paths:
+      - '*.py'
 
 jobs:
   flake8:
