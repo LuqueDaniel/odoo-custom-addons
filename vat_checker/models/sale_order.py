@@ -16,7 +16,7 @@ class CustomSaleOrder(models.Model):
 
     @api.multi
     def _prepare_invoice(self):
-        "Adds Vat check before create an invoice."
+        """Adds Vat check before create an invoice."""
         res = super(CustomSaleOrder, self)._prepare_invoice()
         # Prevents invoicing if the customer has not assigned VAT
         if not self.partner_id.vat:
