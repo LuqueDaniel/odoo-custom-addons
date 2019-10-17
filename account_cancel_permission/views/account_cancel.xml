@@ -20,6 +20,7 @@
     <record id="invoice_form_cancel_inherit" model="ir.ui.view">
         <field name="name">invoice.form.cancel.inherit</field>
         <field name="model">account.invoice</field>
+        <field name="priority">110</field>
         <field name="inherit_id" ref="account.invoice_form"/>
         <field name="arch" type="xml">
             <xpath expr="//button[@name='action_invoice_cancel']" position="replace">
@@ -31,6 +32,7 @@
     <record id="invoice_supplier_cancel_form_inherit" model="ir.ui.view">
         <field name="name">invoice.supplier.cancel.form.inherit</field>
         <field name="model">account.invoice</field>
+        <field name="priority">110</field>
         <field name="inherit_id" ref="account.invoice_supplier_form"/>
         <field name="arch" type="xml">
             <xpath expr="//button[@name='action_invoice_cancel']" position="replace">
@@ -42,6 +44,7 @@
     <record id="bank_statement_draft_form_inherit" model="ir.ui.view">
         <field name="name">bank.statement.draft.form.inherit</field>
         <field name="model">account.bank.statement</field>
+        <field name="priority">110</field>
         <field name="inherit_id" ref="account.view_bank_statement_form"/>
         <field name="arch" type="xml">
             <xpath expr="//button[@name='button_draft']" position="replace">
@@ -53,6 +56,7 @@
     <record id="bank_statement_cancel_form_inherit" model="ir.ui.view">
         <field name="name">bank.statement.cancel.form.inherit</field>
         <field name="model">account.bank.statement</field>
+        <field name="priority">110</field>
         <field name="inherit_id" ref="account.view_bank_statement_form"/>
         <field name="arch" type="xml">
             <xpath expr="//button[@name='button_cancel_reconciliation']" position="replace">
@@ -64,6 +68,7 @@
     <record id="payment_cancel_form_inherit" model="ir.ui.view">
         <field name="name">payment.cancel.form.inherit</field>
         <field name="model">account.payment</field>
+        <field name="priority">110</field>
         <field name="inherit_id" ref="account.view_account_payment_form"/>
         <field name="arch" type="xml">
             <xpath expr="//button[@name='cancel']" position="replace">
