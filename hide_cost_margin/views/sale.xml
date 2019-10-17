@@ -25,6 +25,7 @@
     <record id="sale_order_margin" model="ir.ui.view">
     <field name="name">sale.order.margin.view</field>
     <field name="model">sale.order</field>
+    <field name="priority">110</field>
     <field name="inherit_id" ref="sale_margin.sale_margin_sale_order"/>
     <field name="arch" type="xml">
         <field name="margin" position="replace">
@@ -36,6 +37,7 @@
     <record model="ir.ui.view" id="sale_margin_sale_order_line">
     <field name="name">sale.order.line.margin.view.form1</field>
     <field name="model">sale.order</field>
+    <field name="priority">110</field>
     <field name="inherit_id" ref="sale_margin.sale_margin_sale_order_line"/>
     <field name="arch" type="xml">
         <xpath expr="//field[@name='order_line']/form//field[@name='purchase_price']" position="replace">
@@ -47,6 +49,7 @@
     <record model="ir.ui.view" id="sale_margin_sale_order_line_form">
     <field name="name">sale.order.line.tree.margin.view.form1</field>
     <field name="model">sale.order</field>
+    <field name="priority">110</field>
     <field name="inherit_id" ref="sale_margin.sale_margin_sale_order_line_form"/>
     <field name="arch" type="xml">
         <xpath expr="//field[@name='order_line']/tree//field[@name='purchase_price']" position="replace">
