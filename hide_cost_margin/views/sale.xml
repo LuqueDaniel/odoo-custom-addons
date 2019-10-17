@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <!--
- Copyright 2017-2018 Daniel Luque
- License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl)
+    Copyright 2017-2018 Daniel Luque
+    License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl)
 -->
+
 <odoo>
     <record id="product_template_standard_price" model="ir.ui.view">
     <field name="name">product.template.form.standard_price</field>

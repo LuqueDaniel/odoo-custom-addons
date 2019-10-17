@@ -9,5 +9,4 @@ class SaleReport(models.Model):
     _inherit = 'sale.report'
 
     partner_category_id = fields.Many2many(related='partner_id.category_id',
-                                           string="Partner tags",
-                                           readonly=True)
+                                           string="Partner tags")

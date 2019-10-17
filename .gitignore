@@ -4,3 +4,6 @@ __pycache__
 
 # Editors
 .vscode
+
+# tests
+.pytest_cache

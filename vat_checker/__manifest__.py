@@ -3,7 +3,7 @@
 
 {
     'name': 'Check VAT number before create invoice',
-    'version': '11.0.1.0.0',
+    'version': '12.0.1.0.0',
     'license': 'AGPL-3',
     'summary': 'Check if the customer has a VAT before creating an invoice',
     'author': 'Daniel Luque',

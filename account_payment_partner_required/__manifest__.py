@@ -3,7 +3,7 @@
 
 {
     'name': 'Account Payment Partner Mandatory',
-    'version': '11.0.1.0.0',
+    'version': '12.0.1.0.0',
     'summary': """Makes the Partner Payment Mode and Partner Payment Terms
                fields mandatory.""",
     'author': 'Daniel Luque',
