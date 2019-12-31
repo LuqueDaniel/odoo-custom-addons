@@ -15,8 +15,8 @@
             <label for="standard_price" groups="hide_cost_margin.group_show_cost_and_margin"/>
         </label>
         <div name="standard_price_uom" position="replace">
-            <div name="standard_price_uom" groups="hide_cost_margin.group_show_cost_and_margin" position="replace">
-                <field name="standard_price" widget="monetary" options="{'currency_field': 'currency_id'}" class="oe_inline"/>
+            <div name="standard_price_uom" groups="hide_cost_margin.group_show_cost_and_margin" attrs="{'invisible': [('product_variant_count', '&gt;', 1), ('is_product_variant', '=', False)]}">
+                <field name="standard_price" widget="monetary" options="{'currency_field': 'currency_id', 'field_digits': True}"/>
             </div>
         </div>
     </field>
