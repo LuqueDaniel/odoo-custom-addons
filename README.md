@@ -13,7 +13,7 @@ This repository contains addons that extend / modify parts of
     * Only shows the button to cancel invoices, payments and bank statements to
       users with **Cancel Journal Entries** permission.
 * [account_invoice_financial_risk_filter](https://github.com/LuqueDaniel/odoo-custom-addons/tree/12.0/account_invoice_financial_risk_filter)
-  (12.0.1.0.0)
+  (12.0.1.0.1)
     * Adds the ability to filter invoices through the customer's policy field.
 * [account_invoice_payment_partner_required](https://github.com/LuqueDaniel/odoo-custom-addons/tree/12.0/account_invoice_payment_partner_required)
   (12.0.1.0.0)

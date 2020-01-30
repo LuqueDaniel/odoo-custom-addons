@@ -7,4 +7,4 @@ Adds the ability to filter invoices through the customer's policy field.
 
 ## Depends of
 
-* `account_financial_risk`
+* [account_financial_risk](https://github.com/OCA/credit-control/tree/12.0/account_financial_risk)
