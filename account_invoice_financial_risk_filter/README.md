@@ -7,4 +7,4 @@ Adds the ability to filter invoices through the customer's policy field.
 
 ## Depends of
 
-- `partner_financial_risk`
+* `account_financial_risk`
