@@ -28,6 +28,9 @@ This repository contains addons that extend / modify parts of
   (12.0.1.0.0)
     * Hides the cost and margin prices for all users who don't have the
       `Show costs and margins` permission.
+* [l10n_es_gdpr_notification](https://github.com/LuqueDaniel/odoo-custom-addons/tree/12.0/l10n_es_gdpr_notification)
+  (12.0.1.0.0)
+    * summary": """Adds GDPR notification to documents
 * [partner_tag_append_model](https://github.com/LuqueDaniel/odoo-custom-addons/tree/12.0/partner_tag_append_model)
   (12.0.1.0.0)
     * Adds partner tag field to invoices and sale orders.
