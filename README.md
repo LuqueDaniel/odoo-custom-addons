@@ -24,6 +24,8 @@ This repository contains addons that extend / modify parts of
 * [account_vendor_reference_required](https://github.com/LuqueDaniel/odoo-custom-addons/tree/12.0/account_vendor_reference_required)
   (12.0.1.0.0)
     * Makes the Vendor Reference field mandatory.
+* [brand_external_report_layout_vat](https://github.com/LuqueDaniel/odoo-custom-addons/tree/12.0/brand_external_report_layout_vat)
+  * Display company vat in brand external layout.
 * [hide_cost_margin](https://github.com/LuqueDaniel/odoo-custom-addons/tree/12.0/hide_cost_margin)
   (12.0.1.0.0)
     * Hides the cost and margin prices for all users who don't have the
