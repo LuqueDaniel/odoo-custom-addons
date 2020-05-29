@@ -1,7 +1,7 @@
 ![Odoo Logo](/setup/odoo_logo.png)
 # Odoo Custom Addons
 
-[![Build Status](https://travis-ci.org/LuqueDaniel/odoo-custom-addons.svg?branch=12.0)](https://travis-ci.org/LuqueDaniel/odoo-custom-addons)
+[![Build Status](https://travis-ci.com/LuqueDaniel/odoo-custom-addons.svg?branch=12.0)](https://travis-ci.com/LuqueDaniel/odoo-custom-addons)
 
 This repository contains addons that extend / modify parts of
 **[Odoo](https://www.odoo.com/)** ERP.
