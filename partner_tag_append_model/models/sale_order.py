@@ -6,7 +6,9 @@ from odoo import fields, models
 
 class SaleOrder(models.Model):
     """Adds partner category_id field to sale order model."""
-    _inherit = 'sale.order'
 
-    partner_category_id = fields.Many2many(related='partner_id.category_id',
-                                           string="Partner tags")
+    _inherit = "sale.order"
+
+    partner_category_id = fields.Many2many(
+        related="partner_id.category_id", string="Partner tags"
+    )
