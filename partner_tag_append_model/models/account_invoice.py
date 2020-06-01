@@ -6,7 +6,9 @@ from odoo import fields, models
 
 class AccountInvoice(models.Model):
     """Adds partner category_id field to account invoice model."""
-    _inherit = 'account.invoice'
 
-    partner_category_id = fields.Many2many(related='partner_id.category_id',
-                                           string="Partner tags")
+    _inherit = "account.invoice"
+
+    partner_category_id = fields.Many2many(
+        related="partner_id.category_id", string="Partner tags"
+    )
