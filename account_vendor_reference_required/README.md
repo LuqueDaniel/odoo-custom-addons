@@ -4,4 +4,4 @@ Makes the Vendor Reference field mandatory.
 
 ## Depends of
 
-* `account`
+- `account`

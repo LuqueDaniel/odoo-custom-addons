@@ -4,9 +4,6 @@
 {
     "name": "Brand External Report Layout Vat",
     "summary": """Display company vat in brand external layout.""",
-    "description": """Extends `web.external_layout_ *` views to display
-    company VAT in brand's external layouts.
-    """,
     "author": "Daniel Luque",
     "license": "AGPL-3",
     "website": "https://github.com/LuqueDaniel/odoo-custom-addons",

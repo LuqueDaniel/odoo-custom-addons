@@ -4,12 +4,6 @@
 {
     "name": "GDPR Notification",
     "summary": """Adds GDPR notification to documents""",
-    "description": """Adds GDPR notification to external documents:
-        - Invoices
-        - Sale Order
-        - Delivery Note
-        - Purchase Order
-    """,
     "author": "Daniel Luque",
     "license": "AGPL-3",
     "website": "http://actgrupo.com/",

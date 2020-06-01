@@ -4,5 +4,5 @@ Adds partner tags field to invoices and sale orders.
 
 ## Depends of
 
-* `account`
-* `sale`
+- `account`
+- `sale`
