@@ -8,7 +8,7 @@
     "license": "AGPL-3",
     "website": "http://actgrupo.com/",
     "category": "Localization",
-    "version": "12.0.1.0.1",
+    "version": "12.0.1.0.2",
     "depends": ["sale", "stock", "account", "purchase"],
     "data": ["views/gdpr_documents_notification.xml"],
 }

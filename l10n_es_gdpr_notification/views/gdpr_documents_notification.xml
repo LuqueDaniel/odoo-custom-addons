@@ -7,7 +7,7 @@
     <template id="gdpr_document_notification">
         <div
             id="gdpr_notification"
-            style="text-align: justify; font-size: 1em; padding-top: 10px;"
+            style="text-align: justify; font-size: 0.85em; padding-top: 10px;"
         >
             <p
             >Sus datos de carácter personal han sido recogidos de acuerdo con lo dispuesto en el Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo, de 27 de abril de 2016, relativo a la protección de las personas físicas en lo que respectaal tratamiento de datos personales y a la libre circulación de los mismos.</p>
