@@ -7,7 +7,7 @@
     "author": "Daniel Luque",
     "license": "AGPL-3",
     "website": "https://github.com/LuqueDaniel/odoo-custom-addons",
-    "version": "12.0.1.0.0",
+    "version": "12.0.1.1.0",
     "depends": ["brand_external_report_layout"],
     "data": ["views/external_layouts.xml"],
 }

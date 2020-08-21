@@ -7,4 +7,4 @@ from odoo import fields, models
 class ResBrand(models.Model):
     _inherit = "res.brand"
 
-    report_vat = fields.Char(related="company_id.vat", store=True)
+    vat = fields.Char(related="company_id.vat", store=True)
