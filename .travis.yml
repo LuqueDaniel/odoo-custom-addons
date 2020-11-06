@@ -1,9 +1,9 @@
+os: linux
 language: python
-sudo: false
 cache: pip
 
 python:
-  - "3.6"
+  - "3.7"
 
 addons:
   postgresql: "9.6"
@@ -16,7 +16,7 @@ env:
   global:
     - VERSION="12.0" TESTS="0" LINT_CHECK="0"
 
-  matrix:
+  jobs:
     - LINT_CHECK="1"
     - TESTS="1" ODOO_REPO="odoo/odoo"
     - TESTS="1" ODOO_REPO="OCA/OCB"
@@ -28,7 +28,7 @@ install:
   - travis_install_nightly
 
 script:
-  - travis_wait  travis_run_tests
+  - travis_wait travis_run_tests
 
 after_success:
   - travis_after_tests_success
