@@ -10,4 +10,5 @@
     "version": "12.0.1.1.0",
     "depends": ["brand_external_report_layout"],
     "data": ["views/external_layouts.xml"],
+    "installable": False,
 }

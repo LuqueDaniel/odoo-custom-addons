@@ -11,4 +11,5 @@
     "version": "12.0.1.0.2",
     "depends": ["sale", "stock", "account", "purchase"],
     "data": ["views/gdpr_documents_notification.xml"],
+    "installable": True,
 }
