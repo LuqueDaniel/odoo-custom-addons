@@ -10,4 +10,5 @@
     "category": "Accounting Management",
     "version": "12.0.1.0.0",
     "depends": ["sale_brand", "account_brand"],
+    "installable": True,
 }
