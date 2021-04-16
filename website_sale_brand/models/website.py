@@ -9,13 +9,15 @@ class ModuleName(models.Model):
 
     @api.multi
     def _prepare_sale_order_values(self, partner, pricelist):
-        """Extends website sale order to adds brand."""
-        res = super()._prepare_sale_order_values(partner, pricelist)
+        order = super()._prepare_sale_order_values(partner, pricelist)
+        return self._add_brand_to_sale_order(order, partner)
+
+    def _add_brand_to_sale_order(self, order, partner):
         brand = (
-            self.salesteam_id.brand_id
+            self.salesteam_id.sudo().brand_id
             or partner.parent_id.team_id.brand_id
             or partner.team_id.brand_id
         )
         if brand:
-            res["brand_id"] = brand.id
-        return res
+            order["brand_id"] = brand.id
+        return order
