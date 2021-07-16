@@ -29,7 +29,9 @@ This repository contains addons that extend / modify parts of
 * [partner_tag_append_model](https://github.com/LuqueDaniel/odoo-custom-addons/tree/12.0/partner_tag_append_model)
   * Adds partner tag field to invoices and sale orders.
 * [stock_analysis_valuation](https://github.com/LuqueDaniel/odoo-custom-addons/tree/12.0/stock_analysis_valuation)
-  * Adds current unit cost and inventory value to Stock Analysis report
+  * Adds current unit cost and inventory value to Stock Analysis report.
+* [stock_change_qty_reason_report](https://github.com/LuqueDaniel/odoo-custom-addons/tree/12.0/stock_change_qty_reason_report)
+  * Adds stock change quantity reason report.
 * [vat_checker](https://github.com/LuqueDaniel/odoo-custom-addons/tree/12.0/vat_checker)
   * Check if the customer has a VAT before creating an invoice from a sale
     order.

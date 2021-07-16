@@ -1,0 +1,152 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* stock_change_qty_reason_report
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-16 12:30+0000\n"
+"PO-Revision-Date: 2021-07-16 12:30+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: stock_change_qty_reason_report
+#: model_terms:ir.ui.view,arch_db:stock_change_qty_reason_report.stock_reason_report_pivot_search
+msgid "Cancel"
+msgstr "Cancelado"
+
+#. module: stock_change_qty_reason_report
+#: model:ir.model.fields,field_description:stock_change_qty_reason_report.field_stock_reason_report__category_id
+#: model_terms:ir.ui.view,arch_db:stock_change_qty_reason_report.stock_reason_report_pivot_search
+msgid "Category"
+msgstr "Categoría"
+
+#. module: stock_change_qty_reason_report
+#: model:ir.model.fields,field_description:stock_change_qty_reason_report.field_stock_reason_report__company_id
+#: model_terms:ir.ui.view,arch_db:stock_change_qty_reason_report.stock_reason_report_pivot_search
+msgid "Company"
+msgstr "Compañía"
+
+#. module: stock_change_qty_reason_report
+#: model_terms:ir.ui.view,arch_db:stock_change_qty_reason_report.stock_reason_report_pivot_search
+msgid "Consumable products"
+msgstr "Productos consumibles"
+
+#. module: stock_change_qty_reason_report
+#: model:ir.model.fields,field_description:stock_change_qty_reason_report.field_stock_reason_report__in_date
+msgid "Date of change"
+msgstr "Fecha del cambio"
+
+#. module: stock_change_qty_reason_report
+#: model:ir.model.fields,field_description:stock_change_qty_reason_report.field_stock_reason_report__display_name
+msgid "Display Name"
+msgstr "Nombre a mostrar"
+
+#. module: stock_change_qty_reason_report
+#: model_terms:ir.ui.view,arch_db:stock_change_qty_reason_report.stock_reason_report_pivot_search
+msgid "Done"
+msgstr "Hecho"
+
+#. module: stock_change_qty_reason_report
+#: model_terms:ir.ui.view,arch_db:stock_change_qty_reason_report.stock_reason_report_pivot_search
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: stock_change_qty_reason_report
+#: model_terms:ir.ui.view,arch_db:stock_change_qty_reason_report.stock_reason_report_pivot_search
+msgid "Group By"
+msgstr "Agrupar por"
+
+#. module: stock_change_qty_reason_report
+#: model:ir.model.fields,field_description:stock_change_qty_reason_report.field_stock_reason_report__id
+msgid "ID"
+msgstr "ID"
+
+#. module: stock_change_qty_reason_report
+#: model_terms:ir.ui.view,arch_db:stock_change_qty_reason_report.stock_reason_report_pivot_search
+msgid "Internal location"
+msgstr "Ubicación Interna"
+
+#. module: stock_change_qty_reason_report
+#: model_terms:ir.ui.view,arch_db:stock_change_qty_reason_report.stock_reason_report_pivot_search
+msgid "Inventory change reason"
+msgstr "Motivo del cambio de inventario"
+
+#. module: stock_change_qty_reason_report
+#: model:ir.model.fields,field_description:stock_change_qty_reason_report.field_stock_reason_report__inventory_line_id
+msgid "Inventory line"
+msgstr "Línea de inventario"
+
+#. module: stock_change_qty_reason_report
+#: model:ir.model.fields,field_description:stock_change_qty_reason_report.field_stock_reason_report____last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: stock_change_qty_reason_report
+#: model:ir.model.fields,field_description:stock_change_qty_reason_report.field_stock_reason_report__location_id
+msgid "Location"
+msgstr "Ubicación"
+
+#. module: stock_change_qty_reason_report
+#: model:ir.model.fields,field_description:stock_change_qty_reason_report.field_stock_reason_report__product_id
+#: model_terms:ir.ui.view,arch_db:stock_change_qty_reason_report.stock_reason_report_pivot_search
+msgid "Product"
+msgstr "Producto"
+
+#. module: stock_change_qty_reason_report
+#: model:ir.model.fields,field_description:stock_change_qty_reason_report.field_stock_reason_report__difference_qty
+msgid "Quantity difference"
+msgstr "Diferencia de cantidad"
+
+#. module: stock_change_qty_reason_report
+#: model_terms:ir.ui.view,arch_db:stock_change_qty_reason_report.stock_reason_report_pivot
+#: model_terms:ir.ui.view,arch_db:stock_change_qty_reason_report.stock_reason_report_pivot_search
+msgid "Stock Reason Report"
+msgstr "Informe motivoss de cambio de inventario"
+
+#. module: stock_change_qty_reason_report
+#: model:ir.model.fields,field_description:stock_change_qty_reason_report.field_stock_reason_report__preset_reason_id
+msgid "Stock change reason"
+msgstr "Motivo de cambio de inventario"
+
+#. module: stock_change_qty_reason_report
+#: model:ir.actions.act_window,name:stock_change_qty_reason_report.action_stock_reason_report_pivot
+#: model:ir.ui.menu,name:stock_change_qty_reason_report.menu_action_stock_reason_report_pivot
+msgid "Stock change reason report"
+msgstr "Motivos de cambio de inventario"
+
+#. module: stock_change_qty_reason_report
+#: model_terms:ir.ui.view,arch_db:stock_change_qty_reason_report.stock_reason_report_pivot_search
+msgid "Stock location"
+msgstr "Ubicación de inventario"
+
+#. module: stock_change_qty_reason_report
+#: model:ir.model,name:stock_change_qty_reason_report.model_stock_reason_report
+msgid "Stock reason report"
+msgstr ""
+
+#. module: stock_change_qty_reason_report
+#: model_terms:ir.ui.view,arch_db:stock_change_qty_reason_report.stock_reason_report_pivot_search
+msgid "Stockable products"
+msgstr "Productos almacenables"
+
+#. module: stock_change_qty_reason_report
+#: model_terms:ir.ui.view,arch_db:stock_change_qty_reason_report.stock_reason_report_pivot_search
+msgid "This year"
+msgstr "Este año"
+
+#. module: stock_change_qty_reason_report
+#: model:ir.model.fields,field_description:stock_change_qty_reason_report.field_stock_reason_report__total_value
+msgid "Total value"
+msgstr "Valor total"
+
+#. module: stock_change_qty_reason_report
+#: model:ir.model.fields,field_description:stock_change_qty_reason_report.field_stock_reason_report__unit_value
+msgid "Unit value"
+msgstr "Valor unitario"
+
