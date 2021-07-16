@@ -1,5 +1,3 @@
-root = true
-
 # Configuration for known file extensions
 [*.{css,js,json,less,md,py,rst,sass,scss,xml,yaml,yml}]
 charset = utf-8

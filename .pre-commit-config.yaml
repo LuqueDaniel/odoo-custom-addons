@@ -12,13 +12,14 @@ exclude: |
   (LICENSE.*|COPYING.*)
 default_language_version:
   python: python3
+  node: "14.13.0"
 repos:
   - repo: https://github.com/psf/black
     rev: 19.10b0
     hooks:
       - id: black
-  - repo: https://github.com/prettier/prettier
-    rev: "1.19.1"
+  - repo: https://github.com/prettier/pre-commit
+    rev: "v1.19.1"
     hooks:
       - id: prettier
   # TODO Avoid awebdeveloper/pre-commit-prettier if possible
@@ -54,6 +55,7 @@ repos:
         args: ["--remove"]
       - id: check-case-conflict
       - id: check-docstring-first
+      #- id: check-executables-have-shebangs
       - id: check-merge-conflict
         # exclude files where underlines are not distinguishable from merge conflicts
         exclude: /README\.rst$|^docs/.*\.rst$
@@ -73,6 +75,18 @@ repos:
         args: ["--extend-ignore=F401"] # ignore unused imports in __init__.py
         files: /__init__\.py$
         additional_dependencies: ["flake8-bugbear==19.8.0"]
+  - repo: https://github.com/pre-commit/mirrors-pylint
+    rev: v2.5.3
+    hooks:
+      - id: pylint
+        name: pylint with optional checks
+        args: ["--rcfile=.pylintrc", "--exit-zero"]
+        verbose: true
+        additional_dependencies: ["pylint-odoo==3.5.0"]
+      - id: pylint
+        name: pylint with mandatory checks
+        args: ["--rcfile=.pylintrc-mandatory"]
+        additional_dependencies: ["pylint-odoo==3.5.0"]
   - repo: https://github.com/asottile/pyupgrade
     rev: v1.26.2
     hooks:
@@ -83,3 +97,7 @@ repos:
       - id: isort
         name: isort except __init__.py
         exclude: /__init__\.py$
+#  - repo: https://github.com/acsone/setuptools-odoo
+#    rev: 2.5.2
+#    hooks:
+#      - id: setuptools-odoo-make-default
