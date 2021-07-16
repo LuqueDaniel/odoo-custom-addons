@@ -4,3 +4,4 @@ bank-payment
 credit-control
 brand
 stock-logistics-reporting
+stock-logistics-warehouse
