@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    Copyright 2021 Daniel Luque
+    License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl)
+-->
+<odoo>
+    <record id="preset_reason_stock_inventory_form_required" model="ir.ui.view">
+        <field name="name">stock.inventory.reason.form.required</field>
+        <field name="model">stock.inventory</field>
+        <field
+            name="inherit_id"
+            ref="stock_change_qty_reason.preset_reason_stock_inventory_form_inherit"
+        />
+        <field name="arch" type="xml">
+            <field name="preset_reason_id" position="attributes">
+                <attribute name="required">True</attribute>
+            </field>
+        </field>
+    </record>
+</odoo>
