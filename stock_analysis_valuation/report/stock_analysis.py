@@ -20,17 +20,15 @@ class StockAnalysis(models.Model):
 
         self._cr.execute(
             f"""CREATE OR REPLACE VIEW {self._table} as (
-            SELECT
-                origin.*,
-                pr.value_float AS cost,
-                pr.value_float * origin.quantity AS stock_value
-            FROM (
-                {original_query}
-            ) AS origin
-            JOIN ir_property pr
-                ON pr.res_id = CONCAT(
-                    'product.product,', CAST(origin.product_id AS text)
-                )
+                SELECT
+                    origin.*,
+                    pr.value_float AS cost,
+                    pr.value_float * origin.quantity AS stock_value
+                FROM (
+                    {original_query}
+                ) AS origin
+                JOIN ir_property pr
+                    ON (pr.res_id = 'product.product,' || origin.product_id)
             )"""
         )
 

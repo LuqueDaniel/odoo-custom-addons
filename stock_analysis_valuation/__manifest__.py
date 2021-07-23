@@ -8,7 +8,7 @@
     "summary": "Adds current stock value to stock analysis.",
     "website": "https://github.com/LuqueDaniel/odoo-custom-addons",
     "category": "Stock / Report",
-    "version": "12.0.1.0.0",
+    "version": "12.0.1.0.1",
     "depends": ["stock_analysis"],
     "installable": True,
 }
