@@ -3,7 +3,7 @@
 
 {
     "name": "Permission to Cancel Journal Entries",
-    "version": "12.0.1.0.0",
+    "version": "12.0.1.0.1",
     "summary": "Only shows the button to cancel invoices, payments and "
     "bank statements to users with 'Cancel Journal Entries' "
     "permission",

@@ -40,9 +40,9 @@ class StockReasonReport(models.Model):
         tools.drop_view_if_exists(self.env.cr, self._table)
         self.env.cr.execute(
             f"""CREATE or REPLACE VIEW {self._table} as (
-            {self._select()}
-            {self._from()}
-        )"""
+                {self._select()}
+                {self._from()}
+            )"""
         )
 
     def _select(self):
