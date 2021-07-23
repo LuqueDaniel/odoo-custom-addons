@@ -1,4 +1,5 @@
 ![Odoo Logo](/setup/odoo_logo.png)
+
 # Odoo Custom Addons
 
 [![Build Status](https://travis-ci.com/LuqueDaniel/odoo-custom-addons.svg?branch=12.0)](https://travis-ci.com/LuqueDaniel/odoo-custom-addons)
@@ -32,6 +33,8 @@ This repository contains addons that extend / modify parts of
   * Adds current unit cost and inventory value to Stock Analysis report.
 * [stock_change_qty_reason_report](https://github.com/LuqueDaniel/odoo-custom-addons/tree/12.0/stock_change_qty_reason_report)
   * Adds stock change quantity reason report.
+* [stock_change_qty_reason_required](https://github.com/LuqueDaniel/odoo-custom-addons/tree/12.0/stock_change_qty_reason_required)
+  * Makes the preset reason field required.
 * [vat_checker](https://github.com/LuqueDaniel/odoo-custom-addons/tree/12.0/vat_checker)
   * Check if the customer has a VAT before creating an invoice from a sale
     order.
