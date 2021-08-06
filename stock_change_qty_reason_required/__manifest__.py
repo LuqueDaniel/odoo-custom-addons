@@ -8,8 +8,8 @@
     "summary": "Makes the preset reason field required.",
     "website": "https://github.com/LuqueDaniel/odoo-custom-addons",
     "category": "Stock",
-    "version": "12.0.1.0.0",
+    "version": "12.0.1.0.1",
     "depends": ["stock_change_qty_reason"],
-    "data": ["views/stock_inventory_view.xml"],
+    "data": ["views/stock_inventory_view.xml", "views/stock_inventory_line_view.xml"],
     "installable": True,
 }
