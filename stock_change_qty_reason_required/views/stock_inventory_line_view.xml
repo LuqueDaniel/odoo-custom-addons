@@ -4,16 +4,16 @@
     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl)
 -->
 <odoo>
-    <record id="preset_reason_stock_inventory_form_required" model="ir.ui.view">
-        <field name="name">stock.inventory.reason.form.required</field>
+    <record id="view_inventory_form_reason_id_required" model="ir.ui.view">
+        <field name="name">stock.inventory.form.inherit.reason.required</field>
         <field name="model">stock.inventory</field>
         <field
             name="inherit_id"
-            ref="stock_change_qty_reason.preset_reason_stock_inventory_form_inherit"
+            ref="stock_change_qty_reason.view_inventory_form_reason_id"
         />
         <field name="arch" type="xml">
             <field name="preset_reason_id" position="attributes">
-                <attribute name="invisible">True</attribute>
+                <attribute name="required">True</attribute>
             </field>
         </field>
     </record>
