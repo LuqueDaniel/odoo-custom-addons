@@ -69,6 +69,11 @@ msgstr "ID"
 
 #. module: stock_change_qty_reason_report
 #: model_terms:ir.ui.view,arch_db:stock_change_qty_reason_report.stock_reason_report_pivot_search
+msgid "In Progress"
+msgstr "En proceso"
+
+#. module: stock_change_qty_reason_report
+#: model_terms:ir.ui.view,arch_db:stock_change_qty_reason_report.stock_reason_report_pivot_search
 msgid "Internal location"
 msgstr "Ubicación Interna"
 
