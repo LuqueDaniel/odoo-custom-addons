@@ -51,6 +51,11 @@
                     domain="[('inventory_line_id.state', '=', 'done')]"
                 />
                 <filter
+                    name="In Progress"
+                    string="In Progress"
+                    domain="[('inventory_line_id.state', '=', 'confirm')]"
+                />
+                <filter
                     name="Draft"
                     string="Draft"
                     domain="[('inventory_line_id.state', '=', 'draft')]"
