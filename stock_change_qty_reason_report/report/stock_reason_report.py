@@ -68,3 +68,23 @@ class StockReasonReport(models.Model):
             JOIN product_template pt ON pt.id = pp.product_tmpl_id
             JOIN ir_property pr ON (pr.res_id = 'product.product,' || pp.id)
         """
+
+    @api.model
+    def read_group(
+        self, domain, fields, groupby, offset=0, limit=None, orderby=False, lazy=True
+    ):
+        groups = {
+            "location_id",
+            "company_id",
+            "preset_reason_id",
+            "category_id",
+            "in_date",
+        }
+        if (groups & set(groupby)) or len(groupby) == 0:
+            if "unit_value" in fields:
+                fields.remove("unit_value")
+            if "difference_qty" in fields:
+                fields.remove("difference_qty")
+        return super().read_group(
+            domain, fields, groupby, offset, limit=limit, orderby=orderby, lazy=lazy
+        )
