@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    Copyright 2021 Daniel Luque
+    License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl)
+-->
+<odoo>
+    <template
+        id="website_header_searchbar"
+        inherit_id="website.layout"
+        name="Show Header Search Bar"
+        customize_show="True"
+        active="True"
+    >
+        <xpath expr="//header//nav//button[@class='navbar-toggler']" position="after">
+            <div
+                id="search_box"
+                class="search col-lg-5 col-12 py-3 py-xl-0 navbar-collapse collapse"
+                aria-expanded="false"
+            >
+                <form action='/shop' method="get" class="w-100">
+                    <div class="input-group input-group-lg align-items-center">
+                        <input
+                            type="text"
+                            name="search"
+                            placeholder="Search..."
+                            class="search-query form-control oe_search_box"
+                            t-att-value="search"
+                        />
+                        <div class="input-group-append">
+                            <button
+                                class="btn btn-primary oe_search_button"
+                                type="submit"
+                                area-label="Search"
+                                title="Search"
+                            >
+                                <i class="fa fa-search" />
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </xpath>
+        <xpath expr="//header//nav//div[@id='search_box']" position="before">
+            <div id="navbar_buttons" class="align-items-stretch">
+                <button
+                    type="button"
+                    class="navbar-toggler"
+                    data-toggle="collapse"
+                    data-target="#search_box"
+                >
+                    <i class="fa fa-search" />
+                </button>
+            </div>
+        </xpath>
+        <xpath expr="//header//nav//div[@id='navbar_buttons']" position="inside">
+            <xpath
+                expr="//header//nav//button[@data-target='#top_menu_collapse']"
+                position="move"
+            />
+        </xpath>
+    </template>
+</odoo>

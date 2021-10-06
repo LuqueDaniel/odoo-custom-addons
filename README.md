@@ -38,6 +38,8 @@ This repository contains addons that extend / modify parts of
 * [vat_checker](https://github.com/LuqueDaniel/odoo-custom-addons/tree/12.0/vat_checker)
   * Check if the customer has a VAT before creating an invoice from a sale
     order.
+* [website_header_searchbar](https://github.com/LuqueDaniel/odoo-custom-addons/tree/12.0/website_header_searchbar)
+  * Add a global search bar to eCommerce.
 * [website_sale_brand](https://github.com/LuqueDaniel/odoo-custom-addons/tree/12.0/website_sale_brand)
   * Extends website sale order to add brand_id
 
