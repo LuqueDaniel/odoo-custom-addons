@@ -1,0 +1,28 @@
+name: Run Tests
+
+on: [pull_request]
+
+env:
+  HOST: postgres
+  DB: postgres
+  USER: odoo
+  PASSWORD: odoo
+
+jobs:
+  odoo-test:
+    runs-on: ubuntu-latest
+    container:
+      image: odoo:12.0
+      options: --user root
+    services:
+      postgres:
+        image: postgres:10
+        env:
+          POSTGRES_DB: ${{ env.DB }}
+          POSTGRES_USER: ${{ env.USER }}
+          POSTGRES_PASSWORD: ${{ env.PASSWORD }}
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run Odoo Tests
+        run:
+          /entrypoint.sh odoo -d testdb --test-enable -i website_sale --stop-after-init
