@@ -3,7 +3,7 @@
 
 {
     "name": "Account Invoice Payment Mode Mandatory",
-    "version": "12.0.1.0.0",
+    "version": "12.0.1.0.1",
     "summary": """Makes the Payment Mode and Payment Terms fields of the
                invoice mandatory.""",
     "author": "Daniel Luque",

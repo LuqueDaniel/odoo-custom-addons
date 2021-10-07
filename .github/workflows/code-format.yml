@@ -3,7 +3,7 @@ name: Code Format
 on: [pull_request]
 
 jobs:
-  check-code-format:
+  pre-commit:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
