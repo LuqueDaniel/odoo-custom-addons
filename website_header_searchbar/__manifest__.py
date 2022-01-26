@@ -4,7 +4,7 @@
 {
     "name": "Website Header Search Bar",
     "summary": "Adds search bar to website header",
-    "version": "12.0.1.0.0",
+    "version": "12.0.1.0.1",
     "category": "Website",
     "website": "https://github.com/LuqueDaniel/odoo-custom-addons",
     "author": "Daniel Luque",

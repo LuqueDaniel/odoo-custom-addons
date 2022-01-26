@@ -11,7 +11,10 @@
         customize_show="True"
         active="True"
     >
-        <xpath expr="//header//nav//button[@class='navbar-toggler']" position="after">
+        <xpath
+            expr="//header//nav//button[hasclass('navbar-toggler')]"
+            position="after"
+        >
             <div
                 id="search_box"
                 class="search col-lg-5 col-12 py-3 py-xl-0 navbar-collapse collapse"
