@@ -16,7 +16,7 @@ jobs:
       options: --user root
     services:
       postgres:
-        image: postgres:10
+        image: postgres:12
         env:
           POSTGRES_DB: ${{ env.DB }}
           POSTGRES_USER: ${{ env.USER }}
