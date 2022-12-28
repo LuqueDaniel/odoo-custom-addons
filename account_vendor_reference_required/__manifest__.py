@@ -3,7 +3,7 @@
 
 {
     "name": "Invoice Vender Reference Required",
-    "version": "12.0.1.0.0",
+    "version": "12.0.1.0.1",
     "summary": "Makes the Vendor Reference field mandatory.",
     "author": "Daniel Luque",
     "website": "https://github.com/LuqueDaniel/odoo-custom-addons",

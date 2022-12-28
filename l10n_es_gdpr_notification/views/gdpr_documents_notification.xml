@@ -9,20 +9,34 @@
             id="gdpr_notification"
             style="text-align: justify; font-size: 0.85em; padding-top: 10px;"
         >
-            <p
-            >Sus datos de carácter personal han sido recogidos de acuerdo con lo dispuesto en el Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo, de 27 de abril de 2016, relativo a la protección de las personas físicas en lo que respectaal tratamiento de datos personales y a la libre circulación de los mismos.</p>
-            <p
-            >Le ponemos en conocimiento que estos datos se encuentran almacenados en un fichero propiedad de  <strong
-                    t-field="user.company_id.name"
-                /></p>
-            <p
-            >De acuerdo con la Ley anterior, tiene derecho a ejercer los derechos de acceso, rectificación, supresión, oposición, limitación al tratamiento de sus datos y portabilidad de manera gratuita mediante correo electrónico a: <span
-                    t-field="user.company_id.email"
-                /> o bien en la dirección: <span
-                    t-field="user.company_id.street"
-                />, <span t-field="user.company_id.zip" />, <span
-                    t-field="user.company_id.state_id"
-                />, <span t-field="user.company_id.country_id" />.</p>
+            <p>
+                Sus datos de carácter personal han sido recogidos de acuerdo con lo
+                dispuesto en el Reglamento (UE) 2016/679 del Parlamento Europeo y del
+                Consejo, de 27 de abril de 2016, relativo a la protección de las
+                personas físicas en lo que respectaal tratamiento de datos personales y
+                a la libre circulación de los mismos.
+            </p>
+            <p>
+                Le ponemos en conocimiento que estos datos se encuentran almacenados en
+                un fichero propiedad de
+                <strong t-field="user.company_id.name" />
+            </p>
+            <p>
+                De acuerdo con la Ley anterior, tiene derecho a ejercer los derechos de
+                acceso, rectificación, supresión, oposición, limitación al tratamiento
+                de sus datos y portabilidad de manera gratuita mediante correo
+                electrónico a:
+                <span t-field="user.company_id.email" />
+                o bien en la dirección:
+                <span t-field="user.company_id.street" />
+                ,
+                <span t-field="user.company_id.zip" />
+                ,
+                <span t-field="user.company_id.state_id" />
+                ,
+                <span t-field="user.company_id.country_id" />
+                .
+            </p>
         </div>
     </template>
     <template id="report_invoice_document" inherit_id="account.report_invoice_document">

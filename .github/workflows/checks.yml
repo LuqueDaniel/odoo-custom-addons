@@ -1,0 +1,51 @@
+name: Checks
+
+on:
+  pull_request:
+    branches:
+      - "12.0*"
+  push:
+    branches:
+      - "12.0"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    container: ${{ matrix.container }}
+    name: 🧪 ${{ matrix.name }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - container: ghcr.io/oca/oca-ci/py3.6-odoo12.0:latest
+            makepot: "true"
+            name: Test with Odoo
+          - container: ghcr.io/oca/oca-ci/py3.6-ocb12.0:latest
+            name: Test with OCB
+    services:
+      postgres:
+        image: postgres:9.6
+        env:
+          POSTGRES_USER: odoo
+          POSTGRES_PASSWORD: odoo
+          POSTGRES_DB: odoo
+        ports:
+          - 5432:5432
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          persist-credentials: false
+      - name: Install addons and dependencies
+        run: oca_install_addons
+      - name: Initialize test db
+        run: oca_init_test_database
+      - name: Run tests
+        run: oca_run_tests
+  pre-commit:
+    name: 🎨 Format
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+      - uses: pre-commit/action@v3.0.0
+        name: Lint and format check

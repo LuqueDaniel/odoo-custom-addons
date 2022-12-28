@@ -19,17 +19,20 @@ class StockAnalysis(models.Model):
         original_query = self.env.cr.fetchall()[0][0].replace(";", "")
 
         self._cr.execute(
-            f"""CREATE OR REPLACE VIEW {self._table} as (
+            """
+            CREATE OR REPLACE VIEW {} AS (
                 SELECT
                     origin.*,
                     pr.value_float AS cost,
                     pr.value_float * origin.quantity AS stock_value
                 FROM (
-                    {original_query}
+                    {}
                 ) AS origin
                 JOIN ir_property pr
                     ON (pr.res_id = 'product.product,' || origin.product_id)
-            )"""
+            );""".format(
+                self._table, original_query
+            )
         )
 
     @api.model
