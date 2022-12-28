@@ -10,24 +10,24 @@
         <field name="inherit_id" ref="base.view_partner_form" />
         <field name="arch" type="xml">
             <field name="supplier_payment_mode_id" position="attributes">
-                <attribute
-                    name="attrs"
-                >{'required': [('supplier', '=', True)]}</attribute>
+                <attribute name="attrs">
+                    {'required': [('supplier', '=', True)]}
+                </attribute>
             </field>
             <field name="property_supplier_payment_term_id" position="attributes">
-                <attribute
-                    name="attrs"
-                >{'required': [('supplier', '=', True)]}</attribute>
+                <attribute name="attrs">
+                    {'required': [('supplier', '=', True)]}
+                </attribute>
             </field>
             <field name="customer_payment_mode_id" position="attributes">
-                <attribute
-                    name="attrs"
-                >{'required': [('customer', '=', True)]}</attribute>
+                <attribute name="attrs">
+                    {'required': [('customer', '=', True)]}
+                </attribute>
             </field>
             <field name="property_payment_term_id" position="attributes">
-                <attribute
-                    name="attrs"
-                >{'required': [('customer', '=', True)]}</attribute>
+                <attribute name="attrs">
+                    {'required': [('customer', '=', True)]}
+                </attribute>
             </field>
         </field>
     </record>

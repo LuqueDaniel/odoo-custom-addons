@@ -9,20 +9,24 @@
         inherit_id="web.external_layout_standard"
     >
         <xpath expr="//div[@name='company_address']" position="inside">
-            <span t-if="company.vat"><t
+            <span t-if="company.vat">
+                <t
                     t-esc="(company.country_id.vat_label or 'Tax ID').replace(' ','\N{NO-BREAK SPACE}')"
-                />: <span
-                    t-esc="company.vat.replace(' ','\N{NO-BREAK SPACE}')"
-                /></span>
+                />
+                :
+                <span t-esc="company.vat.replace(' ','\N{NO-BREAK SPACE}')" />
+            </span>
         </xpath>
     </template>
     <template id="brand_external_layout_boxed" inherit_id="web.external_layout_boxed">
         <xpath expr="//div[@name='company_address']" position="inside">
-            <span t-if="company.vat"><t
+            <span t-if="company.vat">
+                <t
                     t-esc="(company.country_id.vat_label or 'Tax ID').replace(' ','\N{NO-BREAK SPACE}')"
-                />: <span
-                    t-esc="company.vat.replace(' ','\N{NO-BREAK SPACE}')"
-                /></span>
+                />
+                :
+                <span t-esc="company.vat.replace(' ','\N{NO-BREAK SPACE}')" />
+            </span>
         </xpath>
     </template>
     <template
@@ -30,20 +34,24 @@
         inherit_id="web.external_layout_background"
     >
         <xpath expr="//span[@t-field='company.partner_id']" position="after">
-            <span t-if="company.vat"><t
+            <span t-if="company.vat">
+                <t
                     t-esc="(company.country_id.vat_label or 'Tax ID').replace(' ','\N{NO-BREAK SPACE}')"
-                />: <span
-                    t-esc="company.vat.replace(' ','\N{NO-BREAK SPACE}')"
-                /></span>
+                />
+                :
+                <span t-esc="company.vat.replace(' ','\N{NO-BREAK SPACE}')" />
+            </span>
         </xpath>
     </template>
     <template id="brand_external_layout_clean" inherit_id="web.external_layout_clean">
         <xpath expr="//span[@t-field='company.partner_id']" position="after">
-            <span t-if="company.vat"><t
+            <span t-if="company.vat">
+                <t
                     t-esc="(company.country_id.vat_label or 'Tax ID').replace(' ','\N{NO-BREAK SPACE}')"
-                />: <span
-                    t-esc="company.vat.replace(' ','\N{NO-BREAK SPACE}')"
-                /></span>
+                />
+                :
+                <span t-esc="company.vat.replace(' ','\N{NO-BREAK SPACE}')" />
+            </span>
         </xpath>
     </template>
 </odoo>
