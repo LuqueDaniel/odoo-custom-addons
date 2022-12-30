@@ -9,6 +9,9 @@ This repository contains addons that extend / modify parts of
 
 ## Addons list
 
+* [l10n_es_gdpr_notification](https://github.com/LuqueDaniel/odoo-custom-addons/tree/14.0/l10n_es_gdpr_notification)
+  * Adds GDPR notification to documents
+
 ## License
 
 [**AGPL-3.0**](http://www.gnu.org/licenses/agpl)
