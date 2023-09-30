@@ -3,7 +3,7 @@
 
 {
     "name": "Hide costs and margins",
-    "version": "12.0.1.0.3",
+    "version": "12.0.1.0.4",
     "summary": "Hides the costs and margins fields of some views",
     "author": "Daniel Luque",
     "website": "https://github.com/LuqueDaniel/odoo-custom-addons",
