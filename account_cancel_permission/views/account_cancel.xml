@@ -4,7 +4,6 @@
     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl)
 -->
 <odoo>
-    <!-- Bank statement overrides updated for Odoo 13 below (use button_reopen and a single cancel_reconciliation entry). -->
     <record id="payment_cancel_form_inherit" model="ir.ui.view">
         <field name="name">payment.cancel.form.inherit</field>
         <field name="model">account.payment</field>
@@ -12,7 +11,9 @@
         <field name="inherit_id" ref="account.view_account_payment_form" />
         <field name="arch" type="xml">
             <xpath expr="//button[@name='cancel']" position="attributes">
-                <attribute name="groups">account_cancel_permission.group_cancel_journal_entries</attribute>
+                <attribute
+                    name="groups"
+                >account_cancel_permission.group_cancel_journal_entries</attribute>
             </xpath>
         </field>
     </record>
@@ -24,10 +25,14 @@
         <field name="priority">120</field>
         <field name="arch" type="xml">
             <xpath expr="//button[@name='button_cancel']" position="attributes">
-                <attribute name="groups">account.group_account_invoice,account_cancel_permission.group_cancel_journal_entries</attribute>
+                <attribute
+                    name="groups"
+                >account.group_account_invoice,account_cancel_permission.group_cancel_journal_entries</attribute>
             </xpath>
             <xpath expr="//button[@name='button_draft']" position="attributes">
-                <attribute name="groups">account.group_account_invoice,account_cancel_permission.group_cancel_journal_entries</attribute>
+                <attribute
+                    name="groups"
+                >account.group_account_invoice,account_cancel_permission.group_cancel_journal_entries</attribute>
             </xpath>
         </field>
     </record>
@@ -38,7 +43,9 @@
         <field name="priority">110</field>
         <field name="arch" type="xml">
             <xpath expr="//button[@name='button_reopen']" position="attributes">
-                <attribute name="groups">account_cancel_permission.group_cancel_journal_entries</attribute>
+                <attribute
+                    name="groups"
+                >account_cancel_permission.group_cancel_journal_entries</attribute>
             </xpath>
         </field>
     </record>
@@ -48,8 +55,13 @@
         <field name="inherit_id" ref="account.view_bank_statement_form" />
         <field name="priority">110</field>
         <field name="arch" type="xml">
-            <xpath expr="//button[@name='button_cancel_reconciliation']" position="attributes">
-                <attribute name="groups">account_cancel_permission.group_cancel_journal_entries</attribute>
+            <xpath
+                expr="//button[@name='button_cancel_reconciliation']"
+                position="attributes"
+            >
+                <attribute
+                    name="groups"
+                >account_cancel_permission.group_cancel_journal_entries</attribute>
             </xpath>
         </field>
     </record>
