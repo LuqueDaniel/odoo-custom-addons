@@ -27,12 +27,12 @@
             <xpath expr="//button[@name='button_cancel']" position="attributes">
                 <attribute
                     name="groups"
-                >account.group_account_invoice,account_cancel_permission.group_cancel_journal_entries</attribute>
+                >account_cancel_permission.group_cancel_journal_entries</attribute>
             </xpath>
             <xpath expr="//button[@name='button_draft']" position="attributes">
                 <attribute
                     name="groups"
-                >account.group_account_invoice,account_cancel_permission.group_cancel_journal_entries</attribute>
+                >account_cancel_permission.group_cancel_journal_entries</attribute>
             </xpath>
         </field>
     </record>
