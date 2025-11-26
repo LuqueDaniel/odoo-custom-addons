@@ -4,72 +4,15 @@
     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl)
 -->
 <odoo>
-    <record id="view_account_journal_form_inherit" model="ir.ui.view">
-        <field name="name">account.journal.form</field>
-        <field name="model">account.journal</field>
-        <field name="inherit_id" ref="account.view_account_journal_form" />
-        <field name="priority">100</field>
-        <field name="arch" type="xml">
-            <field name="update_posted" position="replace">
-                <field
-                    name="update_posted"
-                    groups="account_cancel_permission.group_cancel_journal_entries"
-                />
-            </field>
-        </field>
-    </record>
-    <record id="bank_statement_draft_form_inherit" model="ir.ui.view">
-        <field name="name">bank.statement.draft.form.inherit</field>
-        <field name="model">account.bank.statement</field>
-        <field name="priority">110</field>
-        <field name="inherit_id" ref="account.view_bank_statement_form" />
-        <field name="arch" type="xml">
-            <xpath expr="//button[@name='button_draft']" position="replace">
-                <button
-                    name="button_draft"
-                    states="confirm"
-                    string="Reset to New"
-                    type="object"
-                    groups="account_cancel_permission.group_cancel_journal_entries"
-                />
-            </xpath>
-        </field>
-    </record>
-    <record id="bank_statement_cancel_form_inherit" model="ir.ui.view">
-        <field name="name">bank.statement.cancel.form.inherit</field>
-        <field name="model">account.bank.statement</field>
-        <field name="priority">110</field>
-        <field name="inherit_id" ref="account.view_bank_statement_form" />
-        <field name="arch" type="xml">
-            <xpath
-                expr="//button[@name='button_cancel_reconciliation']"
-                position="replace"
-            >
-                <button
-                    name="button_cancel_reconciliation"
-                    attrs="{'invisible': ['|',('journal_entry_ids', '=', []), ('state', '=', 'confirm')]}"
-                    string="Cancel"
-                    type="object"
-                    icon="fa fa-undo text-warning"
-                    groups="account_cancel_permission.group_cancel_journal_entries"
-                />
-            </xpath>
-        </field>
-    </record>
+    <!-- Bank statement overrides updated for Odoo 13 below (use button_reopen and a single cancel_reconciliation entry). -->
     <record id="payment_cancel_form_inherit" model="ir.ui.view">
         <field name="name">payment.cancel.form.inherit</field>
         <field name="model">account.payment</field>
         <field name="priority">110</field>
         <field name="inherit_id" ref="account.view_account_payment_form" />
         <field name="arch" type="xml">
-            <xpath expr="//button[@name='cancel']" position="replace">
-                <button
-                    name="cancel"
-                    attrs="{'invisible': [('state', '=', 'draft')]}"
-                    string="Cancel"
-                    type="object"
-                    groups="account_cancel_permission.group_cancel_journal_entries"
-                />
+            <xpath expr="//button[@name='cancel']" position="attributes">
+                <attribute name="groups">account_cancel_permission.group_cancel_journal_entries</attribute>
             </xpath>
         </field>
     </record>
@@ -80,21 +23,33 @@
         <field name="inherit_id" ref="account.view_move_form" />
         <field name="priority">120</field>
         <field name="arch" type="xml">
-            <xpath expr="//button[@name='button_cancel']" position="replace">
-                <button
-                    name="button_cancel"
-                    type="object"
-                    string="Cancel Entry"
-                    groups="account_cancel_permission.group_cancel_journal_entries"
-                />
+            <xpath expr="//button[@name='button_cancel']" position="attributes">
+                <attribute name="groups">account.group_account_invoice,account_cancel_permission.group_cancel_journal_entries</attribute>
             </xpath>
-            <xpath expr="//button[@name='button_draft']" position="replace">
-                <button
-                    name="button_draft"
-                    type="object"
-                    string="Reset to Draft"
-                    groups="account_cancel_permission.group_cancel_journal_entries"
-                />
+            <xpath expr="//button[@name='button_draft']" position="attributes">
+                <attribute name="groups">account.group_account_invoice,account_cancel_permission.group_cancel_journal_entries</attribute>
+            </xpath>
+        </field>
+    </record>
+    <record id="bank_statement_reopen_form_inherit" model="ir.ui.view">
+        <field name="name">bank.statement.reopen.form.inherit</field>
+        <field name="model">account.bank.statement</field>
+        <field name="inherit_id" ref="account.view_bank_statement_form" />
+        <field name="priority">110</field>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='button_reopen']" position="attributes">
+                <attribute name="groups">account_cancel_permission.group_cancel_journal_entries</attribute>
+            </xpath>
+        </field>
+    </record>
+    <record id="bank_statement_cancel_form_inherit" model="ir.ui.view">
+        <field name="name">bank.statement.cancel.form.inherit</field>
+        <field name="model">account.bank.statement</field>
+        <field name="inherit_id" ref="account.view_bank_statement_form" />
+        <field name="priority">110</field>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='button_cancel_reconciliation']" position="attributes">
+                <attribute name="groups">account_cancel_permission.group_cancel_journal_entries</attribute>
             </xpath>
         </field>
     </record>
