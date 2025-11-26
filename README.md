@@ -12,6 +12,7 @@ This repository contains addons that extend / modify parts of
 * [l10n_es_gdpr_notification](https://github.com/LuqueDaniel/odoo-custom-addons/tree/13.0/l10n_es_gdpr_notification)
   * Adds GDPR notification to documents
 * [account_cancel_permission](https://github.com/LuqueDaniel/odoo-custom-addons/tree/13.0/account_cancel_permission)
+* [account_invoice_financial_risk_filter](https://github.com/LuqueDaniel/odoo-custom-addons/tree/13.0/account_invoice_financial_risk_filter)
 
 ## License
 
