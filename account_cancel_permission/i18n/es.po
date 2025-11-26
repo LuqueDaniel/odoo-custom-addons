@@ -1,0 +1,39 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* account_cancel_permission
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0-20170911\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-07-16 12:20+0000\n"
+"PO-Revision-Date: 2019-07-16 12:20+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: account_cancel_permission
+#: model:ir.ui.view,arch_db:account_cancel_permission.bank_statement_cancel_form_inherit
+#: model:ir.ui.view,arch_db:account_cancel_permission.payment_cancel_form_inherit
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: account_cancel_permission
+#: model:ir.ui.view,arch_db:account_cancel_permission.invoice_form_cancel_inherit
+#: model:ir.ui.view,arch_db:account_cancel_permission.invoice_supplier_cancel_form_inherit
+msgid "Cancel Invoice"
+msgstr "Cancelar factura"
+
+#. module: account_cancel_permission
+#: model:res.groups,name:account_cancel_permission.group_cancel_journal_entries
+msgid "Cancel Journal Entries"
+msgstr "Cancelar facturas pagos y extractos bancarios"
+
+#. module: account_cancel_permission
+#: model:ir.ui.view,arch_db:account_cancel_permission.bank_statement_draft_form_inherit
+msgid "Reset to New"
+msgstr "Reestablecer a Nuevo"
+
