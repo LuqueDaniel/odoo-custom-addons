@@ -13,6 +13,8 @@ This repository contains addons that extend / modify parts of
   * Adds GDPR notification to documents
 * [account_cancel_permission](https://github.com/LuqueDaniel/odoo-custom-addons/tree/13.0/account_cancel_permission)
 * [account_invoice_financial_risk_filter](https://github.com/LuqueDaniel/odoo-custom-addons/tree/13.0/account_invoice_financial_risk_filter)
+* [account_invoice_payment_partner_required](https://github.com/LuqueDaniel/odoo-custom-addons/tree/13.0/account_invoice_payment_partner_required)
+  * Makes `payment_mode_id` and `invoice_payment_term_id` required on invoices.
 
 ## License
 
