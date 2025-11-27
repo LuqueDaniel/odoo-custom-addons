@@ -17,6 +17,8 @@ This repository contains addons that extend / modify parts of
   * Makes payment mode and payment terms mandatory on partners when relevant.
 * [account_invoice_payment_partner_required](https://github.com/LuqueDaniel/odoo-custom-addons/tree/13.0/account_invoice_payment_partner_required)
   * Makes `payment_mode_id` and `invoice_payment_term_id` required on invoices.
+* [account_vendor_reference_required](https://github.com/LuqueDaniel/odoo-custom-addons/tree/13.0/account_vendor_reference_required)
+  * Makes vendor reference mandatory on supplier invoices.
 
 ## License
 
