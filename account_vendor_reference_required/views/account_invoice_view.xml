@@ -12,7 +12,9 @@
         <field name="inherit_id" ref="account.view_move_form" />
         <field name="arch" type="xml">
             <field name="ref" position="attributes">
-                <attribute name="required">True</attribute>
+                <attribute
+                    name="attrs"
+                >{'required': [('type', 'in', ('in_invoice','in_refund'))]}</attribute>
             </field>
         </field>
     </record>
