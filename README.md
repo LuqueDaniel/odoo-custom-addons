@@ -19,6 +19,8 @@ This repository contains addons that extend / modify parts of
   * Makes `payment_mode_id` and `invoice_payment_term_id` required on invoices.
 * [account_vendor_reference_required](https://github.com/LuqueDaniel/odoo-custom-addons/tree/13.0/account_vendor_reference_required)
   * Makes vendor reference mandatory on supplier invoices.
+* [brand_external_report_layout_vat](https://github.com/LuqueDaniel/odoo-custom-addons/tree/13.0/brand_external_report_layout_vat)
+  * Displays company VAT in brand external report layouts (adds company VAT to external layouts).
 
 ## License
 
