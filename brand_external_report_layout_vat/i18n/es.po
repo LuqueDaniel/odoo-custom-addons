@@ -29,4 +29,3 @@ msgstr "NIF"
 #: model:ir.model.fields,help:brand_external_report_layout_vat.field_res_brand__vat
 msgid "The Tax Identification Number. Complete it if the contact is subjected to government taxes. Used in some legal statements."
 msgstr "El número de identificación de impuesto. Complételo si el contacto está sujeto a los impuestos del gobierno. Utilizado en algunas declaraciones legales."
-
