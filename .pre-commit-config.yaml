@@ -19,7 +19,7 @@ default_language_version:
   node: "14.13.0"
 repos:
   - repo: https://github.com/myint/autoflake
-    rev: v1.4
+    rev: v2.3.1
     hooks:
       - id: autoflake
         args:
@@ -79,13 +79,11 @@ repos:
     hooks:
       - id: pyupgrade
         args: ["--keep-percent-format"]
-  - repo: https://github.com/PyCQA/isort
-    rev: 5.5.1
+  - repo: https://github.com/pycqa/isort
+    rev: 7.0.0
     hooks:
       - id: isort
         name: isort except __init__.py
-        args:
-          - --settings=.
         exclude: /__init__\.py$
   - repo: https://github.com/PyCQA/flake8
     rev: 3.8.3
