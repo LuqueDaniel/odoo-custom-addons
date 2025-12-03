@@ -40,6 +40,7 @@ jobs:
           # Clone OCA dependencies listed in oca_dependencies.txt
           if [ -f oca_dependencies.txt ]; then
             mkdir -p ${HOME}/dependencies
+            clone_failed=0
             while IFS= read -r line || [ -n "$line" ]; do
               # Skip comments and empty lines
               line=$(echo "$line" | sed 's/#.*//' | xargs)
@@ -61,20 +62,30 @@ jobs:
               fi
 
               echo "Cloning ${repo_name} from ${repo_url} (branch: ${repo_branch})"
-              git clone --depth 1 --branch "${repo_branch}" "${repo_url}" "${HOME}/dependencies/${repo_name}" || echo "Warning: Failed to clone ${repo_name}"
+              if ! git clone --depth 1 --branch "${repo_branch}" "${repo_url}" "${HOME}/dependencies/${repo_name}"; then
+                echo "::error::Failed to clone ${repo_name} from ${repo_url}"
+                clone_failed=1
+              fi
             done < oca_dependencies.txt
 
-            # Add dependencies to ADDONS_PATH
+            if [ "$clone_failed" -eq 1 ]; then
+              echo "::error::One or more OCA dependencies failed to clone"
+              exit 1
+            fi
+
+            # Add dependencies to ADDONS_PATH (only if dependencies directory has content)
             DEPS_ADDONS_PATH=""
-            for dir in ${HOME}/dependencies/*/; do
-              if [ -d "$dir" ]; then
-                if [ -z "$DEPS_ADDONS_PATH" ]; then
-                  DEPS_ADDONS_PATH="${dir}"
-                else
-                  DEPS_ADDONS_PATH="${DEPS_ADDONS_PATH},${dir}"
+            if [ -d "${HOME}/dependencies" ] && [ "$(ls -A ${HOME}/dependencies 2>/dev/null)" ]; then
+              for dir in ${HOME}/dependencies/*/; do
+                if [ -d "$dir" ]; then
+                  if [ -z "$DEPS_ADDONS_PATH" ]; then
+                    DEPS_ADDONS_PATH="${dir}"
+                  else
+                    DEPS_ADDONS_PATH="${DEPS_ADDONS_PATH},${dir}"
+                  fi
                 fi
-              fi
-            done
+              done
+            fi
             if [ -n "$DEPS_ADDONS_PATH" ]; then
               if [ -n "$ADDONS_PATH" ]; then
                 echo "ADDONS_PATH=${ADDONS_PATH},${DEPS_ADDONS_PATH}" >> $GITHUB_ENV
