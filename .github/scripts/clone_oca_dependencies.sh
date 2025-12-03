@@ -1,11 +1,11 @@
 #!/bin/bash
 # =============================================================================
-# Clone OCA Dependencies Script
+# Clone Third-Party Dependencies Script
 # =============================================================================
 #
-# This script clones OCA (Odoo Community Association) repositories listed in
-# the oca_dependencies.txt file. These dependencies are required for testing
-# and running Odoo addons that depend on modules from other OCA repositories.
+# This script clones Git repositories listed in a dependencies file (by default
+# oca_dependencies.txt). These dependencies are required for testing and running
+# Odoo addons that depend on modules from external repositories.
 #
 # USAGE:
 #   ./clone_oca_dependencies.sh [OPTIONS]
@@ -26,18 +26,30 @@
 #   Each line should contain:
 #     repo_name [custom_url] [custom_branch]
 #
-#   - repo_name: Name of the OCA repository (e.g., credit-control, bank-payment)
-#   - custom_url: Optional custom Git URL (defaults to https://github.com/OCA/{repo_name}.git)
+#   - repo_name: Repository name (e.g., credit-control, bank-payment)
+#   - custom_url: Optional Git URL (defaults to https://github.com/OCA/{repo_name}.git)
 #   - custom_branch: Optional branch override (defaults to --branch value)
 #   - Lines starting with # are treated as comments
 #   - Empty lines are ignored
 #
-# EXAMPLES:
+#   Example oca_dependencies.txt:
+#     # OCA repositories (URL defaults to https://github.com/OCA/{name}.git)
+#     credit-control
+#     bank-payment
+#     brand
+#
+#     # Custom repository with explicit URL
+#     my-repo https://github.com/myorg/my-repo.git
+#
+#     # Repository with custom URL and specific branch
+#     custom-addons https://github.com/user/custom-addons.git 14.0
+#
+# SCRIPT EXAMPLES:
 #   # Clone dependencies for Odoo 14.0
 #   ./clone_oca_dependencies.sh --branch 14.0
 #
 #   # Clone to a custom directory
-#   ./clone_oca_dependencies.sh --deps-dir /opt/oca-deps
+#   ./clone_oca_dependencies.sh --deps-dir /opt/deps
 #
 #   # Use with custom dependencies file
 #   ./clone_oca_dependencies.sh --deps-file my_deps.txt --branch 16.0
@@ -68,7 +80,7 @@ while [[ $# -gt 0 ]]; do
             shift 2
             ;;
         -h|--help)
-            head -50 "$0" | tail -n +2 | sed 's/^# //' | sed 's/^#//'
+            head -56 "$0" | tail -n +2 | sed 's/^# //' | sed 's/^#//'
             exit 0
             ;;
         *)
@@ -84,7 +96,7 @@ if [ -z "$BRANCH" ]; then
 fi
 
 echo "========================================"
-echo "Clone OCA Dependencies"
+echo "Clone Third-Party Dependencies"
 echo "========================================"
 echo "Dependencies file: ${DEPS_FILE}"
 echo "Target directory: ${DEPS_DIR}"
@@ -117,7 +129,7 @@ while IFS= read -r line || [ -n "$line" ]; do
     repo_url=$(echo "$line" | awk '{print $2}')
     repo_branch=$(echo "$line" | awk '{print $3}')
 
-    # Default to OCA GitHub URL if not specified
+    # Default to OCA GitHub URL if no custom URL is specified
     if [ -z "$repo_url" ]; then
         repo_url="https://github.com/OCA/${repo_name}.git"
     fi
