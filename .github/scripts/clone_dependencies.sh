@@ -147,6 +147,13 @@ while IFS= read -r line || [ -n "$line" ]; do
     echo "  Target: ${DEPS_DIR}/${repo_name}"
     echo "----------------------------------------"
 
+    # Skip if directory already exists
+    if [ -d "${DEPS_DIR}/${repo_name}" ]; then
+        echo "✓ Already exists, skipping: ${repo_name}"
+        clone_count=$((clone_count + 1))
+        continue
+    fi
+
     if git clone --depth 1 --branch "${repo_branch}" "${repo_url}" "${DEPS_DIR}/${repo_name}"; then
         echo "✓ Successfully cloned ${repo_name}"
         clone_count=$((clone_count + 1))
