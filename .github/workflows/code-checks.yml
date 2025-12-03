@@ -65,12 +65,23 @@ jobs:
             done < oca_dependencies.txt
 
             # Add dependencies to ADDONS_PATH
+            DEPS_ADDONS_PATH=""
             for dir in ${HOME}/dependencies/*/; do
               if [ -d "$dir" ]; then
-                export ADDONS_PATH="${ADDONS_PATH},${dir}"
+                if [ -z "$DEPS_ADDONS_PATH" ]; then
+                  DEPS_ADDONS_PATH="${dir}"
+                else
+                  DEPS_ADDONS_PATH="${DEPS_ADDONS_PATH},${dir}"
+                fi
               fi
             done
-            echo "ADDONS_PATH=${ADDONS_PATH}" >> $GITHUB_ENV
+            if [ -n "$DEPS_ADDONS_PATH" ]; then
+              if [ -n "$ADDONS_PATH" ]; then
+                echo "ADDONS_PATH=${ADDONS_PATH},${DEPS_ADDONS_PATH}" >> $GITHUB_ENV
+              else
+                echo "ADDONS_PATH=${DEPS_ADDONS_PATH}" >> $GITHUB_ENV
+              fi
+            fi
           fi
       - name: Install addons and dependencies
         run: oca_install_addons
