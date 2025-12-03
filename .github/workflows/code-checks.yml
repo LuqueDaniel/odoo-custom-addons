@@ -35,6 +35,43 @@ jobs:
       - uses: actions/checkout@v3
         with:
           persist-credentials: false
+      - name: Clone OCA dependencies
+        run: |
+          # Clone OCA dependencies listed in oca_dependencies.txt
+          if [ -f oca_dependencies.txt ]; then
+            mkdir -p ${HOME}/dependencies
+            while IFS= read -r line || [ -n "$line" ]; do
+              # Skip comments and empty lines
+              line=$(echo "$line" | sed 's/#.*//' | xargs)
+              [ -z "$line" ] && continue
+
+              # Parse line: repo_name [url] [branch]
+              repo_name=$(echo "$line" | awk '{print $1}')
+              repo_url=$(echo "$line" | awk '{print $2}')
+              repo_branch=$(echo "$line" | awk '{print $3}')
+
+              # Default to OCA GitHub URL if not specified
+              if [ -z "$repo_url" ]; then
+                repo_url="https://github.com/OCA/${repo_name}.git"
+              fi
+
+              # Default to ODOO_VERSION branch if not specified
+              if [ -z "$repo_branch" ]; then
+                repo_branch="${ODOO_VERSION:-13.0}"
+              fi
+
+              echo "Cloning ${repo_name} from ${repo_url} (branch: ${repo_branch})"
+              git clone --depth 1 --branch "${repo_branch}" "${repo_url}" "${HOME}/dependencies/${repo_name}" || echo "Warning: Failed to clone ${repo_name}"
+            done < oca_dependencies.txt
+
+            # Add dependencies to ADDONS_PATH
+            for dir in ${HOME}/dependencies/*/; do
+              if [ -d "$dir" ]; then
+                export ADDONS_PATH="${ADDONS_PATH},${dir}"
+              fi
+            done
+            echo "ADDONS_PATH=${ADDONS_PATH}" >> $GITHUB_ENV
+          fi
       - name: Install addons and dependencies
         run: oca_install_addons
       - name: Initialize test db
