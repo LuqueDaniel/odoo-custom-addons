@@ -8,7 +8,7 @@
 # Odoo addons that depend on modules from external repositories.
 #
 # USAGE:
-#   ./clone_oca_dependencies.sh [OPTIONS]
+#   ./clone_dependencies.sh [OPTIONS]
 #
 # OPTIONS:
 #   --branch <branch>    Odoo version branch to clone (e.g., 13.0, 14.0, 16.0)
@@ -46,13 +46,13 @@
 #
 # SCRIPT EXAMPLES:
 #   # Clone dependencies for Odoo 14.0
-#   ./clone_oca_dependencies.sh --branch 14.0
+#   ./clone_dependencies.sh --branch 14.0
 #
 #   # Clone to a custom directory
-#   ./clone_oca_dependencies.sh --deps-dir /opt/deps
+#   ./clone_dependencies.sh --deps-dir /opt/deps
 #
 #   # Use with custom dependencies file
-#   ./clone_oca_dependencies.sh --deps-file my_deps.txt --branch 16.0
+#   ./clone_dependencies.sh --deps-file my_deps.txt --branch 16.0
 #
 # =============================================================================
 

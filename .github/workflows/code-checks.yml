@@ -39,7 +39,7 @@ jobs:
         run: |
           # Determine branch version from the target branch name (e.g., "13.0" from "13.0" or "13.0-dev")
           BRANCH_VERSION=$(echo "${{ github.base_ref || github.ref_name }}" | grep -oE '^[0-9]+\.[0-9]+' || echo "13.0")
-          ./.github/scripts/clone_oca_dependencies.sh --branch "${BRANCH_VERSION}"
+          ./.github/scripts/clone_dependencies.sh --branch "${BRANCH_VERSION}"
       - name: Install addons and dependencies
         run: oca_install_addons
       - name: Initialize test db
