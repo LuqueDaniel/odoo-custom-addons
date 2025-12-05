@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    Copyright 2020 Daniel Luque
+    License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl)
+-->
+<odoo>
+    <template
+        id="brand_external_layout_standard"
+        inherit_id="web.external_layout_standard"
+    >
+        <xpath expr="//div[@name='company_address']" position="inside">
+            <span t-if="o.company_id.vat">
+                <span>Tax ID: </span>
+                <span t-esc="o.company_id.vat.replace(' ','\N{NO-BREAK SPACE}')" />
+            </span>
+        </xpath>
+    </template>
+    <template id="brand_external_layout_boxed" inherit_id="web.external_layout_boxed">
+        <xpath expr="//div[@name='company_address']" position="inside">
+            <span t-if="o.company_id.vat">
+                <span>Tax ID: </span>
+                <span t-esc="o.company_id.vat.replace(' ','\N{NO-BREAK SPACE}')" />
+            </span>
+        </xpath>
+    </template>
+    <template
+        id="brand_external_layout_background"
+        inherit_id="web.external_layout_background"
+    >
+        <xpath expr="//span[@t-field='company.partner_id']" position="after">
+            <span t-if="o.company_id.vat">
+                <span>Tax ID: </span>
+                <span t-esc="o.company_id.vat.replace(' ','\N{NO-BREAK SPACE}')" />
+            </span>
+        </xpath>
+    </template>
+    <template id="brand_external_layout_clean" inherit_id="web.external_layout_clean">
+        <xpath expr="//span[@t-field='company.partner_id']" position="after">
+            <span t-if="o.company_id.vat">
+                <span>Tax ID: </span>
+                <span t-esc="o.company_id.vat.replace(' ','\N{NO-BREAK SPACE}')" />
+            </span>
+        </xpath>
+    </template>
+</odoo>
