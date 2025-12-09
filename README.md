@@ -23,6 +23,8 @@ This repository contains addons that extend / modify parts of
   * Displays company VAT in brand external report layouts (adds company VAT to external layouts).
 * [hide_cost_margin](https://github.com/LuqueDaniel/odoo-custom-addons/tree/13.0/hide_cost_margin)
   * Hides cost and margin fields for users without the permission.
+* [partner_tag_append_model](https://github.com/LuqueDaniel/odoo-custom-addons/tree/13.0/partner_tag_append_model)
+  * Adds partner tags field to invoices, sale orders and sale reports.
 
 ## License
 
