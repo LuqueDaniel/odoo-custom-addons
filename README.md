@@ -25,6 +25,8 @@ This repository contains addons that extend / modify parts of
   * Hides cost and margin fields for users without the permission.
 * [partner_tag_append_model](https://github.com/LuqueDaniel/odoo-custom-addons/tree/13.0/partner_tag_append_model)
   * Adds partner tags field to invoices, sale orders and sale reports.
+* [sale_account_brand_editable](https://github.com/LuqueDaniel/odoo-custom-addons/tree/13.0/sale_account_brand_editable)
+  * Allow editing the `brand_id` in orders and invoices.
 
 ## License
 
