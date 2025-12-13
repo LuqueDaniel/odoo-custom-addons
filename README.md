@@ -27,6 +27,8 @@ This repository contains addons that extend / modify parts of
   * Adds partner tags field to invoices, sale orders and sale reports.
 * [sale_account_brand_editable](https://github.com/LuqueDaniel/odoo-custom-addons/tree/13.0/sale_account_brand_editable)
   * Allow editing the `brand_id` in orders and invoices.
+* [stock_change_qty_reason_report](https://github.com/LuqueDaniel/odoo-custom-addons/tree/13.0/stock_change_qty_reason_report)
+  * Report that shows stock quantity change reasons. Depends on OCA module `stock_change_qty_reason`.
 
 ## License
 

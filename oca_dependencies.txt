@@ -3,3 +3,4 @@
 credit-control
 bank-payment
 brand
+stock-logistics-warehouse
