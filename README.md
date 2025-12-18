@@ -29,6 +29,8 @@ This repository contains addons that extend / modify parts of
   * Allow editing the `brand_id` in orders and invoices.
 * [stock_change_qty_reason_report](https://github.com/LuqueDaniel/odoo-custom-addons/tree/13.0/stock_change_qty_reason_report)
   * Report that shows stock quantity change reasons. Depends on OCA module `stock_change_qty_reason`.
+* [stock_change_qty_reason_required](https://github.com/LuqueDaniel/odoo-custom-addons/tree/13.0/stock_change_qty_reason_required)
+  * Makes the `preset_reason_id` required on inventory records. Depends on OCA module `stock_change_qty_reason`.
 
 ## License
 
